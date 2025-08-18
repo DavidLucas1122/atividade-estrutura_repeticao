@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <script>
+            let valor1 = prompt("Digite um valor")
+            let valor2 = prompt("Digite outro valor")
+            if(valor1 > valor2){
+                while(valor1 >= valor2){
+                    console.log("Número: " + valor1)
+                    valor1--
+                }
+            }
+            else if(valor2 > valor1){
+                while(valor2 >= valor1){
+                    console.log("Número: " + valor2)
+                    valor2--
+                }
+            }
+            else{
+                console.log("Os valores são iguais!")
+            }
+    </script>
+</body>
+</html>
