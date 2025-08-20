@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleEx5.css">
     <title>Exercício 05</title>
 </head>
+
 <body>
+
     <h1>Exercício 05</h1>
+    <h2>Tabuada</h2>
+    <div class="usua">
+        <input id="input" class="valor" type="number" value="Valor" placeholder="Digite um número">
+        <button onclick="Calc()">Calcular</button>
+    </div>
+    <div id="quadro" class="quadro">
+
+    </div>
     <script>
-        let valor = prompt("Digite um número!")
-        console.log("Número digitado pelo usuário: " + valor)
-        let multiplicador = 0
-        while(multiplicador <=10){
-            console.log(valor + "X" + multiplicador + "=" + valor*multiplicador )
-            multiplicador++
+        function Calc() {
+            let valor = document.getElementById("input").value
+            let multiplicador = 0
+            while (multiplicador <= 10) {
+                resultado = `${valor} x ${multiplicador} = ${valor * multiplicador}`
+                const item = document.createElement('p')
+                item.textContent = resultado;
+
+                document.getElementById("quadro").appendChild(item);
+                multiplicador++
+            }
+
+
         }
+
     </script>
 </body>
